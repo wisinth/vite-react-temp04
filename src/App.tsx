@@ -12,11 +12,11 @@ export default function App() {
           Precise • Accurate
         </p>
 
-        <div style={styles.buttonContainer}>
-          <a href="https://github.com/wisinth/vite-react-temp04" target="_blank" style={styles.button}>
-            View Repo
-          </a>
-        </div>
+        //<div style={styles.buttonContainer}>
+          //<a href="https://github.com/wisinth/vite-react-temp04" target="_blank" style={styles.button}>
+            //View Repo
+          //</a>
+        //</div>
       </div>
 
       <div style={styles.floatingCircle1} />
