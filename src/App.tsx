@@ -1,66 +1,114 @@
-// src/App.tsx
+import React from "react";
 
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import cloudflareLogo from "./assets/Cloudflare_Logo.svg";
-import honoLogo from "./assets/hono.svg";
-import "./App.css";
+export default function App() {
+  return (
+    <div style={styles.container}>
+      <div style={styles.backgroundGradient} />
 
-function App() {
-	const [count, setCount] = useState(0);
-	const [name, setName] = useState("unknown");
+      <div style={styles.card}>
+        <h1 style={styles.title}>✨ Welcome to Vite + React</h1>
 
-	return (
-		<>
-			<div>
-				<a href="https://vite.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
-				<a href="https://hono.dev/" target="_blank">
-					<img src={honoLogo} className="logo cloudflare" alt="Hono logo" />
-				</a>
-				<a href="https://workers.cloudflare.com/" target="_blank">
-					<img
-						src={cloudflareLogo}
-						className="logo cloudflare"
-						alt="Cloudflare logo"
-					/>
-				</a>
-			</div>
-			<h1>Vite + React + Hono + Cloudflare</h1>
-			<div className="card">
-				<button
-					onClick={() => setCount((count) => count + 1)}
-					aria-label="increment"
-				>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<div className="card">
-				<button
-					onClick={() => {
-						fetch("/api/")
-							.then((res) => res.json() as Promise<{ name: string }>)
-							.then((data) => setName(data.name));
-					}}
-					aria-label="get name"
-				>
-					Name from API is: {name}
-				</button>
-				<p>
-					Edit <code>worker/index.ts</code> to change the name
-				</p>
-			</div>
-			<p className="read-the-docs">Click on the logos to learn more</p>
-		</>
-	);
+        <p style={styles.subtitle}>
+          Static Site • Cloudflare Pages • Smooth Animation
+        </p>
+
+        <div style={styles.buttonContainer}>
+          <a href="https://github.com/wisinth/vite-react-temp03" target="_blank" style={styles.button}>
+            View Repo
+          </a>
+        </div>
+      </div>
+
+      <div style={styles.floatingCircle1} />
+      <div style={styles.floatingCircle2} />
+    </div>
+  );
 }
 
-export default App;
+//
+// ⭐ CSS-in-JS แบบง่าย — เคลื่อนไหวได้
+//
+const styles: { [key: string]: React.CSSProperties } = {
+  container: {
+    position: "relative",
+    minHeight: "100vh",
+    overflow: "hidden",
+    fontFamily: "Segoe UI, sans-serif",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: "#0f0f0f",
+  },
+
+  backgroundGradient: {
+    position: "absolute",
+    width: "150%",
+    height: "150%",
+    background:
+      "radial-gradient(circle at 30% 30%, #4a7cff, transparent 70%), radial-gradient(circle at 70% 70%, #ff3ca6, transparent 70%)",
+    animation: "rotateBg 20s linear infinite",
+    zIndex: 0,
+  },
+
+  card: {
+    zIndex: 10,
+    padding: "50px 70px",
+    borderRadius: "20px",
+    background: "rgba(255,255,255,0.08)",
+    backdropFilter: "blur(10px)",
+    color: "white",
+    textAlign: "center",
+    boxShadow: "0 0 40px rgba(0,0,0,0.4)",
+    border: "1px solid rgba(255,255,255,0.12)",
+  },
+
+  title: {
+    fontSize: "42px",
+    marginBottom: "20px",
+    fontWeight: "700",
+    animation: "fadeIn 1.5s ease",
+  },
+
+  subtitle: {
+    fontSize: "18px",
+    opacity: 0.85,
+    marginBottom: "30px",
+    animation: "fadeIn 2s ease",
+  },
+
+  buttonContainer: {
+    marginTop: "10px",
+  },
+
+  button: {
+    padding: "12px 30px",
+    fontSize: "18px",
+    textDecoration: "none",
+    borderRadius: "8px",
+    color: "#fff",
+    background: "linear-gradient(90deg, #4a7cff, #9353ff)",
+    transition: "0.3s",
+  },
+
+  floatingCircle1: {
+    position: "absolute",
+    top: "15%",
+    left: "10%",
+    width: "140px",
+    height: "140px",
+    borderRadius: "50%",
+    background: "rgba(255,255,255,0.06)",
+    animation: "float1 6s ease-in-out infinite",
+  },
+
+  floatingCircle2: {
+    position: "absolute",
+    bottom: "10%",
+    right: "15%",
+    width: "180px",
+    height: "180px",
+    borderRadius: "50%",
+    background: "rgba(255,255,255,0.04)",
+    animation: "float2 7s ease-in-out infinite",
+  },
+};
