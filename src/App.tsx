@@ -9,7 +9,7 @@ export default function App() {
         <h1 style={styles.title}>✨ Welcome to Precisac.com</h1>
 
         <p style={styles.subtitle}>
-          Precise • Accurate  /* Static Site • Cloudflare Pages • Smooth Animation */
+          Precise • Accurate
         </p>
 
         <div style={styles.buttonContainer}>
