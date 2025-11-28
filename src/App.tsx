@@ -6,14 +6,14 @@ export default function App() {
       <div style={styles.backgroundGradient} />
 
       <div style={styles.card}>
-        <h1 style={styles.title}>✨ Welcome to Vite + React</h1>
+        <h1 style={styles.title}>✨ Welcome to Precisec.com</h1>
 
         <p style={styles.subtitle}>
-          Static Site • Cloudflare Pages • Smooth Animation
+          Precise • Accurate  //Static Site • Cloudflare Pages • Smooth Animation
         </p>
 
         <div style={styles.buttonContainer}>
-          <a href="https://github.com/wisinth/vite-react-temp03" target="_blank" style={styles.button}>
+          <a href="https://github.com/wisinth/vite-react-temp04" target="_blank" style={styles.button}>
             View Repo
           </a>
         </div>
