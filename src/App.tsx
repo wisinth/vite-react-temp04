@@ -46,7 +46,8 @@ const styles: { [key: string]: React.CSSProperties } = {
     width: "150%",
     height: "150%",
     background:
-      "radial-gradient(circle at 30% 30%, #4a7cff, transparent 70%), radial-gradient(circle at 70% 70%, #ff3ca6, transparent 70%)",
+      {/* "radial-gradient(circle at 30% 30%, #4a7cff, transparent 70%), radial-gradient(circle at 70% 70%, #ff3ca6, transparent 70%)", */}
+      "radial-gradient(circle at 30% 30%, #4a7cff, transparent 70%), radial-gradient(circle at 70% 70%, #ff7b00, transparent 70%)",
     animation: "rotateBg 20s linear infinite",
     zIndex: 0,
   },
