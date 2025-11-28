@@ -6,10 +6,10 @@ export default function App() {
       <div style={styles.backgroundGradient} />
 
       <div style={styles.card}>
-        <h1 style={styles.title}>✨ Welcome to Precisec.com</h1>
+        <h1 style={styles.title}>✨ Welcome to Precisac.com</h1>
 
         <p style={styles.subtitle}>
-          Precise • Accurate  //Static Site • Cloudflare Pages • Smooth Animation
+          Precise • Accurate  /* Static Site • Cloudflare Pages • Smooth Animation */
         </p>
 
         <div style={styles.buttonContainer}>
